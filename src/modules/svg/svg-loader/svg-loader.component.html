@@ -1,0 +1,20 @@
+<svg
+  aria-hidden="true"
+  style="position: absolute; width: 0; height: 0; overflow: hidden;"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <defs>
+    <symbol
+      *ngFor="let definition of svgLoaderService.$shapes | async as list"
+      [attr.id]="definition.symbol.id"
+      [attr.viewBox]="definition.symbol.viewBox"
+    >
+      <title>{{ definition.title }}</title>
+      <g *ngFor="let shape of definition.shapes">
+        <path *ngIf="shape.type === 'path'" [attr.d]="shape.d" [attr.fill]="shape.fill"></path>
+      </g>
+    </symbol>
+  </defs>
+</svg>

@@ -1,20 +1,58 @@
+<!-- basic svg defs example, angular loader below -->
+<svg
+  aria-hidden="true"
+  style="position: absolute; width: 0; height: 0; overflow: hidden;"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+  <defs>
+    <symbol id="icon-stop" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="50" fill="red" />
+      <circle fill="purple" cx="50" cy="50" r="40" />
+      <rect class="b" width="42" height="42" fill="pink" transform="translate(29 29)" />
+    </symbol>
+    <!-- <symbol id="icon-home" viewBox="0 0 32 32">
+      <title>home</title>
+      <path class="inner" d="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z"></path>
+    </symbol>
+    <symbol id="icon-user" viewBox="0 0 32 32">
+      <title>user</title>
+      <path
+        d="M18 22.082v-1.649c2.203-1.241 4-4.337 4-7.432 0-4.971 0-9-6-9s-6 4.029-6 9c0 3.096 1.797 6.191 4 7.432v1.649c-6.784 0.555-12 3.888-12 7.918h28c0-4.030-5.216-7.364-12-7.918z"
+      ></path>
+    </symbol>
+    <symbol id="icon-notification" viewBox="0 0 32 32">
+      <title>notification</title>
+      <path
+        d="M16 3c-3.472 0-6.737 1.352-9.192 3.808s-3.808 5.72-3.808 9.192c0 3.472 1.352 6.737 3.808 9.192s5.72 3.808 9.192 3.808c3.472 0 6.737-1.352 9.192-3.808s3.808-5.72 3.808-9.192c0-3.472-1.352-6.737-3.808-9.192s-5.72-3.808-9.192-3.808zM16 0v0c8.837 0 16 7.163 16 16s-7.163 16-16 16c-8.837 0-16-7.163-16-16s7.163-16 16-16zM14 22h4v4h-4zM14 6h4v12h-4z"
+      ></path>
+    </symbol> -->
+  </defs>
+</svg>
+
+<!-- angular svg loader  -->
+<app-svg-loader></app-svg-loader>
+
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <h1>Welcome to {{ title }}!</h1>
+  <svg class="stop" width="16" height="16" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <use href="#icon-stop" />
+  </svg>
+
+  <svg width="16" height="16" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <use href="#icon-quill" />
+  </svg>
 </div>
-<h2>Here are some links to help you start: </h2>
+<h2>Here are some links to help you start:</h2>
 <ul>
+  <li><a [routerLink]="['/']" routerLinkActive="router-link-active">home</a></li>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+    <a [routerLink]="['/route-one']" routerLinkActive="router-link-active">route one</a>
   </li>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+    <a [routerLink]="['/route-two']" routerLinkActive="router-link-active">route two</a>
   </li>
 </ul>
 
